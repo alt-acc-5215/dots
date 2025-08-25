@@ -1,0 +1,233 @@
+/* ========== GLOBAL SETTINGS ========== */
+stage {
+  background-color: transparent;
+}
+
+#panel {
+  background-color: black;
+  height: 2.2em;
+  font-weight: bold;
+  box-shadow: 0 0 7px #8000ff, 0 0 9px #6a0294 inset;
+}
+
+#panel .panel-button {
+  color: #f70051;
+  transition-duration: 200ms;
+  padding: 0 10px;
+}
+
+#panel .panel-button:hover {
+  background-color: rgba(138, 43, 226, 0.2);
+  box-shadow: inset 0 0 10px #cc00ff;
+  color: #ffccff;
+}
+
+#panel .panel-button:active,
+#panel .panel-button:checked {
+  background-color: rgba(128, 0, 255, 0.3);
+  box-shadow: inset 0 0 15px #8000ff;
+}
+
+#panel .system-status-icon,
+#panel .popup-menu-arrow {
+  color: #f70051; 
+  transition: all 0.3s ease;
+}
+
+
+.popup-menu {
+  border-color: #000000 !important;
+  color: #fff !important;
+}
+
+.popup-menu-item {
+  padding: 6px 12px;
+  transition: background 0.3s;
+}
+
+.popup-menu-item:hover {
+  background-color: rgb(0, 0, 0);
+  box-shadow: inset 0 0 10px #7700ff;
+  color: #ff0000;
+}
+
+#overview {
+  background-color: transparent;
+}
+
+#searchEntry {
+  border: 2px solid #8000ff;
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px #8000ff;
+}
+
+
+.calendar {
+  background-color: #0a001a;
+  border: 2px solid #8000ff;
+  box-shadow: 0 0 5px #9900ff;
+  color: white;
+}
+
+.datemenu-calendar-day-base {
+  background-color: transparent;
+  color: white;
+}
+
+.datemenu-calendar-day-base:hover {
+  background-color: #8000ff;
+  color: black;
+}
+
+
+#notification {
+  background-color: rgba(20, 0, 40, 0.95);
+  border: 2px solid #8000ff;
+  box-shadow: 0 0 5px #8000ff, 0 0 10px #9900ff;
+  color: white;
+}
+
+
+.modal-dialog {
+  background-color: rgba(15, 0, 35, 0.95);
+  border: 2px solid #8000ff;
+  border-radius: 8px;
+  color: white;
+  box-shadow: 0 0 5px #8000ff, 0 0 10px #7700ff;
+}
+
+/* ========== HOT CORNER & DASH ========== */
+#dash {
+  background-color: transparent;
+  border-radius: 8px;
+}
+
+.dash-background {
+  background: #ffffff;
+}
+
+.dash-label {
+  color: #423cf2 ;
+  text-shadow: 0 0  1px #ff0000;
+}
+
+
+.unlock-screen,
+.login-screen {
+  background: transparent;
+}
+
+#lockDialogGroup {
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #8000ff;
+  box-shadow: 0 0 20px #8000ff;
+}
+
+
+.tooltip {
+  background-color: rgba(20, 0, 40, 0.9);
+  color: white;
+  border-radius: 4px;
+  border: 1px solid #8000ff;
+  box-shadow: 0 0 10px #6f00ff;
+}
+
+
+.quick-settings,
+.quick-toggle,
+.quick-toggle-menu,
+.quick-toggle .icon,
+.aggregate-menu {
+  background-color: #000000 !important;
+  border-radius: 50px;
+  color: #ffffff;
+  border: 2px solid #8000ff;
+  box-shadow: rgb(255, 0, 0) 0 0 5px inset;
+}
+
+.quick-toggle:focus,
+.quick-toggle:hover{
+  background-color: #00059e;
+  box-shadow: inset rgb(145, 3, 3) 0 0 7px;
+}
+
+
+.quick-toggle:checked {
+  background-color: rgb(0, 0, 0);
+  box-shadow: inset 0 0 10px #2600ff;
+}
+
+
+
+
+.quick-toggle-label {
+  color: #ffcccc;
+  font-weight: bold;
+}
+
+.quick-toggle .icon {
+  color: #000000;
+}
+
+.quick-toggle .popup-menu-arrow {
+  color: #4B006E;
+}
+
+.system-menu .slider {
+  color: #00059e;
+  background-color: #1a0030;
+  border: 1px solid #8000ff;
+  box-shadow: inset 0 0 5px #ff00ff;
+}
+
+.popup-menu-content,
+.system-menu,
+.aggregate-menu,
+.system-menu-box {
+  background-color: #000000 !important;
+  color: white;
+  border: 2px solid #8000ff;
+  box-shadow: 0 0 5px #190392, 0 0 5px #4b00c4;
+}
+
+
+
+
+.quick-toggle-has-menu .quick-toggle-arrow,
+.quick-menu-toggle .quick-toggle-menu-button,
+.quick-toggle-has-menu .quick-toggle-menu-button {
+  background-color: #000 !important;
+  border: 2px solid #5804ac;
+  box-shadow:inset 0 0 5px #00aad4
+  
+}
+
+
+
+.slider {
+  color: #45097ce0; 
+  -barlevel-active-background-color: #390674; 
+  -barlevel-active-border-color: #00bfff; 
+  -barlevel-overdrive-color: #3e0870; 
+  -barlevel-overdrive-border-color: #00bfff; 
+  -slider-handle-radius: 10px;
+  -slider-handle-border-width: 2px;
+  -slider-handle-border-color: #8a2be2; 
+
+}
+
+
+.quick-toggle-has-menu .quick-toggle-menu-button {
+  background-color: #000 !important;
+}
+
+.quick-settings .icon-button,
+.icon-button,
+.quick-settings-system-item .icon-button{
+  background-color: rgb(0, 0, 0);
+  box-shadow: inset 0 0 5px #7700ff;
+  color: #ff0000;
+  border-radius: 50px;
+}
+
