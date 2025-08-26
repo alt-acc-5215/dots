@@ -1,4 +1,8 @@
 
+/* Cyberpunk Neon Esque purple-ish glowing-flickering theme */
+
+
+/* ============ Toolbar Buttons =========== */
 @keyframes toolbar-icon-rainbow {
   0%   { filter: drop-shadow(0 0 2px #ff00ff); }
   20%  { filter: drop-shadow(0 0 2px #00ffff); }
@@ -8,35 +12,20 @@
   100% { filter: drop-shadow(0 0 2px #ff00ff); }
 }
 
-#nav-bar toolbarbutton .toolbarbutton-icon {
+#nav-bar toolbarbutton .toolbarbutton-icon,
+#vertical-tabs-newtab-button,
+#sidebar-launcher-splitter {
   animation: toolbar-icon-rainbow 2s linear infinite !important;
   transition: transform 0.3s ease-in-out !important;
 }
-
 
 #nav-bar toolbarbutton:hover .toolbarbutton-icon {
   transform: scale(1.1);
   filter: drop-shadow(0 0 4px #ff00ff) drop-shadow(0 0 8px #ff00ff);
 }
 
-#vertical-tabs-newtab-button{
-	 animation: toolbar-icon-rainbow 2s linear infinite !important;
-     transition: transform 0.3s ease-in-out !important;
-	
-}
 
-#sidebar-launcher-splitter{
-	 animation: toolbar-icon-rainbow 2s linear infinite !important;
-     transition: transform 0.3s ease-in-out !important;
-}
-
-#tabbrowser-tabs{
-	animation: neon-rainbow 4s infinite linear !important;
-	transition: transform 0.3s ease-in-out !important;
-}
-
-
-
+/* =============== Tabs =================== */
 @keyframes neon-rainbow {
   0%   { box-shadow: 0 0 15px #ff00ff; border-color: #ff00ff; }
   25%  { box-shadow: 0 0 15px #00ffff; border-color: #00ffff; }
@@ -45,9 +34,72 @@
   100% { box-shadow: 0 0 15px #ff00ff; border-color: #ff00ff; }
 }
 
+#tabbrowser-tabs {
+  animation: neon-rainbow 4s infinite linear !important;
+  transition: transform 0.3s ease-in-out !important;
+}
+
+.tabbrowser-tab {
+  color: #f3c1ff !important;
+  text-shadow: 0 0 4px #ff00ff !important;
+  background-color: transparent !important;
+}
+
+.tabbrowser-tab[selected] .tab-background {
+  border: 4px solid #32356e !important;
+  box-shadow: 0 0 2px #685d96 !important;
+  background-color: #d00b6a !important;
+}
+
+/* === Audio Playing Tab === */
+@keyframes audio-tab-glow {
+  0%   { box-shadow: 0 0 2px #ff00ff, 0 0 4px #ff00ff, 0 0 8px #ff00ff; background-color: #8000ff; }
+  50%  { box-shadow: 0 0 4px #ff33ff, 0 0 8px #ff33ff, 0 0 12px #ff33ff; background-color: #a000ff; }
+  100% { box-shadow: 0 0 2px #ff00ff, 0 0 4px #ff00ff, 0 0 8px #ff00ff; background-color: #8000ff; }
+}
+
+.tabbrowser-tab[soundplaying] .tab-background {
+  animation: audio-tab-glow 2s infinite alternate !important;
+  border: 2px solid #ff00ff !important;
+  color: white !important;
+}
+
+.tabbrowser-tab[soundplaying] .tab-label {
+  text-shadow: 0 0 4px #ff00ff !important;
+  color: white !important;
+}
+
+.tabbrowser-tab[soundplaying] .tab-icon-image {
+  filter: drop-shadow(0 0 2px #ff00ff) !important;
+}
+
+
+
+/* ============= Top Toolbars ============= */
+#TabsToolbar, #navigator-toolbox {
+  background-color: #0a001a !important;
+  border-bottom: 2px solid #d580ff !important;
+  box-shadow: 0 0 12px #a040ff inset, 0 0 8px #ff00ff !important;
+}
+
+#nav-bar {
+  animation: neon-rainbow 4s infinite linear !important;
+  border: 2px solid #ff00ff !important;
+  color: white !important;
+}
+
+
+/* ============== URL Bar ================ */
+@keyframes neon-background {
+  0%   { background: linear-gradient(270deg, #ff00ff, #00ffff); }
+  25%  { background: linear-gradient(270deg, #00ffff, #00ff00); }
+  50%  { background: linear-gradient(270deg, #00ff00, #ffff00); }
+  75%  { background: linear-gradient(270deg, #ffff00, #ff00ff); }
+  100% { background: linear-gradient(270deg, #ff00ff, #00ffff); }
+}
 
 #urlbar {
-  animation: neon-rainbow 4s infinite linear !important;
+  animation: neon-background 8s ease-in-out infinite alternate;
   border: 2px solid #ff00ff !important;
   background-color: black !important;
   color: white !important;
@@ -60,120 +112,37 @@
   background: transparent !important;
 }
 
-
 #urlbar:hover {
   box-shadow: 0 0 15px #ff80ff, 0 0 30px #ff00ff inset !important;
 }
 
-#vertical-pinned-tabs-container-separator{
-	animation: toolbar-icon-rainbow 4s infinite linear !important;
-	border: 1px solid #ff00ff !important;
-}
-
-
-/* --- Neon Top Tab Bar / Toolbar --- */
-#TabsToolbar, #navigator-toolbox {
-  background-color: #0a001a !important;
-  border-bottom: 2px solid #d580ff !important;
-  box-shadow: 0 0 12px #a040ff inset, 0 0 8px #ff00ff !important;
-}
-
-.tabbrowser-tab {
-  color: #f3c1ff !important;
-  text-shadow: 0 0 4px #ff00ff !important;
-  background-color: transparent !important;
-}
-@keyframes neon-background {
-  0% {
-    background: linear-gradient(270deg, #ff00ff, #00ffff);
-  }
-  25% {
-    background: linear-gradient(270deg, #00ffff, #00ff00);
-  }
-  50% {
-    background: linear-gradient(270deg, #00ff00, #ffff00);
-  }
-  75% {
-    background: linear-gradient(270deg, #ffff00, #ff00ff);
-  }
-  100% {
-    background: linear-gradient(270deg, #ff00ff, #00ffff);
-  }
-}
-
-#urlbar {
-  animation: neon-background 8s ease-in-out infinite alternate;
-  /* Keep other styles */
+#identity-icon-box {
+  animation: neon-rainbow 4s infinite linear !important;
   border: 2px solid #ff00ff !important;
+  background-color: black !important;
   color: white !important;
 }
 
-:root {
-  --arrowpanel-background: black !important;
-  --arrowpanel-color: white !important;
-  --arrowpanel-border-color: #ff00ff !important;
-  --panel-border-radius: 10px !important;
+#urlbar-searchmode-switcher {
+  border: 2px solid #ff00ff !important;
+  background-color: black !important;
+  color: white !important;
 }
 
-@keyframes extension-popup-rainbow {
-  0%   { box-shadow: 0 0 10px #ff00ff; }
-  25%  { box-shadow: 0 0 10px #00ffff; }
-  50%  { box-shadow: 0 0 10px #00ff00; }
-  75%  { box-shadow: 0 0 10px #ffff00; }
-  100% { box-shadow: 0 0 10px #ff00ff; }
+#urlbar-results {
+  background-color: #000000;
 }
 
-
-
-:root {
-  --arrowpanel-background: #1a0030 !important; /
-  --arrowpanel-color: #ff3333 !important;     
-  --arrowpanel-border-color: #ff0033 !important;
-  --panel-border-radius: 10px !important;
+#urlbar-background {
+  color: #000000 !important;
 }
 
-/* Glowing animation for popups */
-@keyframes popup-neon-glow {
-  0%   { box-shadow: 0 0 10px #20033b; }
-  50%  { box-shadow: 0 0 20px #0b0144, 0 0 30px #040349 inset; }
-  100% { box-shadow: 0 0 10px #3700ff; }
-}
-
-/* Apply to common popup panels */
-
-:root{
-  --sidebar-background-color: #1a0030 !important; 
-  --sidebar-text-color: #ff3333 !important;      
-  --sidebar-border-color: #ff0033 !important;
-}
-
-#sidebar-box {
-  position: relative !important;
-  border-right: 2px solid transparent !important;
-  border-radius: 0 8px 8px 0 !important;
-  box-shadow: 
-    0 0 5px 1px rgba(0, 255, 255, 0.6),
-    0 0 10px 2px rgba(0, 200, 255, 0.4),
-    0 0 15px 3px rgba(0, 150, 255, 0.2) !important;
-  animation: neon-pulse 3s infinite alternate !important;
+.urlbar-input-container {
+  background-color: #000000 !important;
 }
 
 
-@keyframes neon-pulse {
-  0% {
-    box-shadow: 
-      0 0 5px 1px rgba(0, 255, 255, 0.6),
-      0 0 10px 2px rgba(0, 200, 255, 0.4),
-      0 0 15px 3px rgba(0, 150, 255, 0.2) !important;
-  }
-  100% {
-    box-shadow: 
-      0 0 10px 2px rgba(0, 255, 255, 0.8),
-      0 0 20px 4px rgba(0, 200, 255, 0.6),
-      0 0 30px 6px rgba(0, 150, 255, 0.4) !important;
-  }
-}
-
+/* ============== Sidebar ================ */
 @keyframes sidebar-neon-background {
   0%   { background: linear-gradient(135deg, #100020, #001122); }
   25%  { background: linear-gradient(135deg, #001122, #0a001a); }
@@ -181,6 +150,30 @@
   75%  { background: linear-gradient(135deg, #000008, #100020); }
   100% { background: linear-gradient(135deg, #100020, #001122); }
 }
+
+@keyframes neon-pulse {
+  0% {
+    box-shadow: 0 0 5px 1px rgba(0, 255, 255, 0.6),
+                0 0 10px 2px rgba(0, 200, 255, 0.4),
+                0 0 15px 3px rgba(0, 150, 255, 0.2) !important;
+  }
+  100% {
+    box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.8),
+                0 0 20px 4px rgba(0, 200, 255, 0.6),
+                0 0 30px 6px rgba(0, 150, 255, 0.4) !important;
+  }
+}
+
+#sidebar-box {
+  position: relative !important;
+  border-right: 2px solid transparent !important;
+  border-radius: 0 8px 8px 0 !important;
+  box-shadow: 0 0 5px 1px rgba(0, 255, 255, 0.6),
+              0 0 10px 2px rgba(0, 200, 255, 0.4),
+              0 0 15px 3px rgba(0, 150, 255, 0.2) !important;
+  animation: neon-pulse 3s infinite alternate !important;
+}
+
 #sidebar-main {
   animation: sidebar-neon-background 1s infinite linear !important;
   background-size: 400% 400% !important;
@@ -190,41 +183,23 @@
   box-shadow: 0 0 12px #4b0082 inset, 0 0 20px #8a2be2 !important;
 }
 
-
-
-
-#nav-bar{
-	animation: neon-rainbow 4s infinite linear !important;
-    border: 2px solid #ff00ff !important;
-    color: white !important;
+#vertical-pinned-tabs-container-separator {
+  animation: toolbar-icon-rainbow 4s infinite linear !important;
+  border: 1px solid #ff00ff !important;
 }
 
 
-#allTabsMenu .toolbarbutton-text,
-#allTabsMenu .label,
-#allTabsMenu .menu-iconic-text {
-  animation: sidebar-neon-background 1s infinite linear !important;
-  background-size: 400% 400% !important;
-  background-attachment: fixed !important;
-  border: 2px solid #8a2be2 !important;
-  color: white !important;
-  box-shadow: 0 0 12px #4b0082 inset, 0 0 20px #8a2be2 !important;
-}
 
-#allTabsMenu .menuitem-iconic {
-  fill: #ff33cc !important;
-  filter: drop-shadow(0 0 2px #ff00ff);
-}
-
+/* ============== Popups ================= */
 @keyframes popup-border-rainbow {
-  0%   { border-color: #ff0000; }   
-  14%  { border-color: #ff9900; }   
-  28%  { border-color: #ffff00; }   
-  42%  { border-color: #00ff00; }   
-  57%  { border-color: #00ffff; }   
-  71%  { border-color: #0000ff; }  
-  85%  { border-color: #ff00ff; }   
-  100% { border-color: #ff0000; }   
+  0%   { border-color: #ff0000; }
+  14%  { border-color: #ff9900; }
+  28%  { border-color: #ffff00; }
+  42%  { border-color: #00ff00; }
+  57%  { border-color: #00ffff; }
+  71%  { border-color: #0000ff; }
+  85%  { border-color: #ff00ff; }
+  100% { border-color: #ff0000; }
 }
 
 .panel-arrowcontent,
@@ -239,16 +214,31 @@ menupopup {
   border-radius: 10px !important;
 }
 
-
-#identity-icon-box{
-	 animation: neon-rainbow 4s infinite linear !important;
-	 border: 2px solid #ff00ff !important;
-	 background-color: black !important;
-	 color: white !important;
+:root {
+  --arrowpanel-background: #1a0030 !important;
+  --arrowpanel-color: #ff3333 !important;
+  --arrowpanel-border-color: #ff0033 !important;
+  --panel-border-radius: 10px !important;
+  --sidebar-background-color: #1a0030 !important;
+  --sidebar-text-color: #ff3333 !important;
+  --sidebar-border-color: #ff0033 !important;
 }
 
-#urlbar-searchmode-switcher{
-	border: 2px solid #ff00ff !important;
-	background-color: black !important;
-	color: white !important;
+
+
+/* =========== All Tabs Menu ============== */
+#allTabsMenu .toolbarbutton-text,
+#allTabsMenu .label,
+#allTabsMenu .menu-iconic-text {
+  animation: sidebar-neon-background 1s infinite linear !important;
+  background-size: 400% 400% !important;
+  background-attachment: fixed !important;
+  border: 2px solid #8a2be2 !important;
+  color: white !important;
+  box-shadow: 0 0 12px #4b0082 inset, 0 0 20px #8a2be2 !important;
+}
+
+#allTabsMenu .menuitem-iconic {
+  fill: #ff33cc !important;
+  filter: drop-shadow(0 0 2px #ff00ff);
 }
